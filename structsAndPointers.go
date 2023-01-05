@@ -18,4 +18,5 @@ func main() {
 	p := newPerson()
 	p.age = 10
 	fmt.Println(p.age)
+	// returns "10"
 }
