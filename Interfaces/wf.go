@@ -10,15 +10,15 @@ func NewWellsFargo() *WellsFargo{
   }
 }
 
-func (w WellsFargo) GetBalance() int{
+func (w *WellsFargo) GetBalance() int{
   return w.balance 
 }
 
-func (w WellsFargo) Deposit(amount int) {
+func (w *WellsFargo) Deposit(amount int) {
   w.balance += amount 
 }
 
-func (w WellsFargo) Withdraw(amount int) error {
+func (w *WellsFargo) Withdraw(amount int) error {
   if amount > w.balance{
     return errors.New("insufficient funds")
   }
