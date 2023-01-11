@@ -7,6 +7,11 @@ type BankAccount interface {
 }
 
 func main(){
-  
+  wf := NewWellsFargo()
+  wf.Deposit(100)
+  wf.Deposit(200)
+  if err := wf.Withdraw(5) ; err != nil {
+    panic(err) 
+  }
   
 }
